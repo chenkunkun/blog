@@ -5,9 +5,9 @@
   <subtitle>IT技术学习与分享</subtitle>
   <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="https://chenkunkun.github.io/"/>
+  <link href="https://chenkunkun.github.io/blog/"/>
   <updated>2019-04-15T05:29:41.491Z</updated>
-  <id>https://chenkunkun.github.io/</id>
+  <id>https://chenkunkun.github.io/blog/</id>
   
   <author>
     <name>ShiYe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>测试0</title>
-    <link href="https://chenkunkun.github.io/2019/04/15/%E6%B5%8B%E8%AF%950/"/>
-    <id>https://chenkunkun.github.io/2019/04/15/测试0/</id>
+    <link href="https://chenkunkun.github.io/blog/2019/04/15/%E6%B5%8B%E8%AF%950/"/>
+    <id>https://chenkunkun.github.io/blog/2019/04/15/测试0/</id>
     <published>2019-04-15T04:45:23.000Z</published>
     <updated>2019-04-15T05:29:41.491Z</updated>
     
@@ -27,17 +27,17 @@
     
     </summary>
     
-      <category term="all" scheme="https://chenkunkun.github.io/categories/all/"/>
+      <category term="all" scheme="https://chenkunkun.github.io/blog/categories/all/"/>
     
     
-      <category term="all" scheme="https://chenkunkun.github.io/tags/all/"/>
+      <category term="all" scheme="https://chenkunkun.github.io/blog/tags/all/"/>
     
   </entry>
   
   <entry>
     <title>测试文章</title>
-    <link href="https://chenkunkun.github.io/2019/04/15/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
-    <id>https://chenkunkun.github.io/2019/04/15/测试文章/</id>
+    <link href="https://chenkunkun.github.io/blog/2019/04/15/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
+    <id>https://chenkunkun.github.io/blog/2019/04/15/测试文章/</id>
     <published>2019-04-15T02:34:01.000Z</published>
     <updated>2019-04-15T05:29:44.843Z</updated>
     
@@ -54,17 +54,17 @@
     
     </summary>
     
-      <category term="all" scheme="https://chenkunkun.github.io/categories/all/"/>
+      <category term="all" scheme="https://chenkunkun.github.io/blog/categories/all/"/>
     
     
-      <category term="all" scheme="https://chenkunkun.github.io/tags/all/"/>
+      <category term="all" scheme="https://chenkunkun.github.io/blog/tags/all/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://chenkunkun.github.io/2019/04/15/hello-world/"/>
-    <id>https://chenkunkun.github.io/2019/04/15/hello-world/</id>
+    <link href="https://chenkunkun.github.io/blog/2019/04/15/hello-world/"/>
+    <id>https://chenkunkun.github.io/blog/2019/04/15/hello-world/</id>
     <published>2019-04-15T01:56:48.378Z</published>
     <updated>2019-04-15T05:29:37.544Z</updated>
     
@@ -80,21 +80,21 @@
     
     </summary>
     
-      <category term="all" scheme="https://chenkunkun.github.io/categories/all/"/>
+      <category term="all" scheme="https://chenkunkun.github.io/blog/categories/all/"/>
     
-      <category term="教程" scheme="https://chenkunkun.github.io/categories/all/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://chenkunkun.github.io/blog/categories/all/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="all" scheme="https://chenkunkun.github.io/tags/all/"/>
+      <category term="all" scheme="https://chenkunkun.github.io/blog/tags/all/"/>
     
-      <category term="起步" scheme="https://chenkunkun.github.io/tags/%E8%B5%B7%E6%AD%A5/"/>
+      <category term="起步" scheme="https://chenkunkun.github.io/blog/tags/%E8%B5%B7%E6%AD%A5/"/>
     
   </entry>
   
   <entry>
     <title>typora-vue-theme主题介绍</title>
-    <link href="https://chenkunkun.github.io/2018/09/07/demo/"/>
-    <id>https://chenkunkun.github.io/2018/09/07/demo/</id>
+    <link href="https://chenkunkun.github.io/blog/2018/09/07/demo/"/>
+    <id>https://chenkunkun.github.io/blog/2018/09/07/demo/</id>
     <published>2018-09-07T01:25:00.000Z</published>
     <updated>2019-04-15T06:22:10.448Z</updated>
     
@@ -102,12 +102,12 @@
     
     </summary>
     
-      <category term="Markdown" scheme="https://chenkunkun.github.io/categories/Markdown/"/>
+      <category term="Markdown" scheme="https://chenkunkun.github.io/blog/categories/Markdown/"/>
     
     
-      <category term="Typora" scheme="https://chenkunkun.github.io/tags/Typora/"/>
+      <category term="Typora" scheme="https://chenkunkun.github.io/blog/tags/Typora/"/>
     
-      <category term="Markdown" scheme="https://chenkunkun.github.io/tags/Markdown/"/>
+      <category term="Markdown" scheme="https://chenkunkun.github.io/blog/tags/Markdown/"/>
     
   </entry>
   
