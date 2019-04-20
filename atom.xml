@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chenkunkun.com/"/>
-  <updated>2019-04-15T05:29:41.491Z</updated>
+  <updated>2019-04-16T06:56:39.167Z</updated>
   <id>https://chenkunkun.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo+Github搭建一款属于自己的博客</title>
+    <link href="https://chenkunkun.com/2019/04/16/hexo_demo/"/>
+    <id>https://chenkunkun.com/2019/04/16/hexo_demo/</id>
+    <published>2019-04-16T01:25:00.000Z</published>
+    <updated>2019-04-16T06:56:39.167Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;一、前言&quot;&gt;&lt;a href=&quot;#一、前言&quot; class=&quot;headerlink&quot; title=&quot;一、前言&quot;&gt;&lt;/a&gt;一、前言&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;使用github pages服务搭建博客的好处有：
+1. 全是静态文件，访问速度快；
+2.
+        
+      
+    
+    </summary>
+    
+      <category term="Hexo" scheme="https://chenkunkun.com/categories/Hexo/"/>
+    
+    
+      <category term="Hexo入门" scheme="https://chenkunkun.com/tags/Hexo%E5%85%A5%E9%97%A8/"/>
+    
+      <category term="Github博客" scheme="https://chenkunkun.com/tags/Github%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>测试0</title>
@@ -88,26 +118,6 @@
       <category term="all" scheme="https://chenkunkun.com/tags/all/"/>
     
       <category term="起步" scheme="https://chenkunkun.com/tags/%E8%B5%B7%E6%AD%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>typora-vue-theme主题介绍</title>
-    <link href="https://chenkunkun.com/2018/09/07/demo/"/>
-    <id>https://chenkunkun.com/2018/09/07/demo/</id>
-    <published>2018-09-07T01:25:00.000Z</published>
-    <updated>2019-04-16T01:41:07.544Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="Markdown" scheme="https://chenkunkun.com/categories/Markdown/"/>
-    
-    
-      <category term="Typora" scheme="https://chenkunkun.com/tags/Typora/"/>
-    
-      <category term="Markdown" scheme="https://chenkunkun.com/tags/Markdown/"/>
     
   </entry>
   

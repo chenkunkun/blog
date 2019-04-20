@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Hexo+Github搭建一款属于自己的博客</title>
+      <link href="/2019/04/16/hexo_demo/"/>
+      <url>/2019/04/16/hexo_demo/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><pre><code>使用github pages服务搭建博客的好处有：1. 全是静态文件，访问速度快；2. 免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；3. 可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；4. 数据绝对安全，基于github的版本管理，想恢复到哪个历史版本都行；5. 博客内容可以轻松打包、转移、发布到其它平台；</code></pre><h3 id="二、准备工作"><a href="#二、准备工作" class="headerlink" title="二、准备工作"></a>二、准备工作</h3><pre><code>在开始一切之前，你必须已经：github账号、npm、懂一点编程知识</code></pre><h3 id="三、搭建github博客"><a href="#三、搭建github博客" class="headerlink" title="三、搭建github博客"></a>三、搭建github博客</h3><h4 id="1、创建仓库"><a href="#1、创建仓库" class="headerlink" title="1、创建仓库"></a>1、创建仓库</h4><pre><code>新建一个名为你的用户名.github.io的仓库，比如说，如果你的github用户名是test，那么你就新建test.github.io的仓库（必须是你的用户名，其它名称无效），将来你的网站访问地址就是 http://test.github.io 了。</code></pre><h4 id="2、绑定域名"><a href="#2、绑定域名" class="headerlink" title="2、绑定域名"></a>2、绑定域名</h4><pre><code>阿里云注册一个域名，进行实名认证，进行CNAME解析，解析地址为仓库地址，如：test.github.io。</code></pre><h3 id="四、配置SSH"><a href="#四、配置SSH" class="headerlink" title="四、配置SSH"></a>四、配置SSH</h3><h4 id="1、获取公钥"><a href="#1、获取公钥" class="headerlink" title="1、获取公钥"></a>1、获取公钥</h4><pre><code>$ cd ~/. ssh #检查本机已存在的ssh密钥$ ssh-keygen -t rsa -C &quot;邮件地址&quot; #生成ssh密钥$ vi .ssh\id_rsa.pub #查看</code></pre><h4 id="2、复制公钥内容"><a href="#2、复制公钥内容" class="headerlink" title="2、复制公钥内容"></a>2、复制公钥内容</h4><pre><code>打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：</code></pre><h4 id="3、测试是否成功"><a href="#3、测试是否成功" class="headerlink" title="3、测试是否成功"></a>3、测试是否成功</h4><pre><code>$ ssh -T git@github.com # 注意邮箱地址不用改如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：  Hi liuxianan! You&apos;ve successfully authenticated, but GitHub does not provide shell access.看到这个信息说明SSH已配置成功！</code></pre><h3 id="五、使用Hexo写博客"><a href="#五、使用Hexo写博客" class="headerlink" title="五、使用Hexo写博客"></a>五、使用Hexo写博客</h3><h4 id="切换主题"><a href="#切换主题" class="headerlink" title="切换主题"></a>切换主题</h4><p>修改 Hexo 根目录下的 <code>_config.yml</code> 的  <code>theme</code> 的值：<code>theme: hexo-theme-matery</code></p><h5 id="config-yml-文件的其它修改建议"><a href="#config-yml-文件的其它修改建议" class="headerlink" title="_config.yml 文件的其它修改建议:"></a><code>_config.yml</code> 文件的其它修改建议:</h5><ul><li>请修改 <code>_config.yml</code> 的 <code>url</code> 的值为你的网站主 <code>URL</code>（如：<code>http://xxx.github.io</code>）。</li><li>建议修改两个 <code>per_page</code> 的分页条数值为 <code>6</code> 的倍数，如：<code>12</code>、<code>18</code> 等，这样文章列表在各个屏幕下都能较好的显示。</li><li>如果你是中文用户，则建议修改 <code>language</code> 的值为 <code>zh-CN</code>。</li></ul><h4 id="新建分类-categories-页"><a href="#新建分类-categories-页" class="headerlink" title="新建分类 categories 页"></a>新建分类 categories 页</h4><p><code>categories</code> 页是用来展示所有分类的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>categories/index.md</code> 文件，那么你就需要新建一个，命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">"categories"</span></span><br></pre></td></tr></table></figure><p>编辑你刚刚新建的页面文件 <code>/source/categories/index.md</code>，至少需要以下内容：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">categories</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018</span><span class="bullet">-09</span><span class="bullet">-30</span> <span class="number">17</span><span class="string">:25:30</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"categories"</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">"categories"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure><h4 id="新建标签-tags-页"><a href="#新建标签-tags-页" class="headerlink" title="新建标签 tags 页"></a>新建标签 tags 页</h4><p><code>tags</code> 页是用来展示所有标签的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>tags/index.md</code> 文件，那么你就需要新建一个，命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">"tags"</span></span><br></pre></td></tr></table></figure><p>编辑你刚刚新建的页面文件 <code>/source/tags/index.md</code>，至少需要以下内容：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018</span><span class="bullet">-09</span><span class="bullet">-30</span> <span class="number">18</span><span class="string">:23:38</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"tags"</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">"tags"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure><h4 id="新建关于我-about-页"><a href="#新建关于我-about-页" class="headerlink" title="新建关于我 about 页"></a>新建关于我 about 页</h4><p><code>about</code> 页是用来展示<strong>关于我和我的博客</strong>信息的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>about/index.md</code> 文件，那么你就需要新建一个，命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">"about"</span></span><br></pre></td></tr></table></figure><p>编辑你刚刚新建的页面文件 <code>/source/about/index.md</code>，至少需要以下内容：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">about</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018</span><span class="bullet">-09</span><span class="bullet">-30</span> <span class="number">17</span><span class="string">:25:30</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"about"</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">"about"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure><h4 id="新建友情连接-friends-页（可选的）"><a href="#新建友情连接-friends-页（可选的）" class="headerlink" title="新建友情连接 friends 页（可选的）"></a>新建友情连接 friends 页（可选的）</h4><p><code>friends</code> 页是用来展示<strong>友情连接</strong>信息的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>friends/index.md</code> 文件，那么你就需要新建一个，命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">"friends"</span></span><br></pre></td></tr></table></figure><p>编辑你刚刚新建的页面文件 <code>/source/friends/index.md</code>，至少需要以下内容：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">friends</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018</span><span class="bullet">-12</span><span class="bullet">-12</span> <span class="number">21</span><span class="string">:25:30</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"friends"</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">"friends"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure><p>同时，在你的博客 <code>source</code> 目录下新建 <code>_data</code> 目录，在 <code>_data</code> 目录中新建 <code>friends.json</code> 文件，文件内容如下所示：</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[&#123;</span><br><span class="line">    <span class="attr">"avatar"</span>: <span class="string">"http://image.luokangyuan.com/1_qq_27922023.jpg"</span>,</span><br><span class="line">    <span class="attr">"name"</span>: <span class="string">"码酱"</span>,</span><br><span class="line">    <span class="attr">"introduction"</span>: <span class="string">"我不是大佬，只是在追寻大佬的脚步"</span>,</span><br><span class="line">    <span class="attr">"url"</span>: <span class="string">"http://luokangyuan.com/"</span>,</span><br><span class="line">    <span class="attr">"title"</span>: <span class="string">"前去学习"</span></span><br><span class="line">&#125;, &#123;</span><br><span class="line">    <span class="attr">"avatar"</span>: <span class="string">"http://image.luokangyuan.com/4027734.jpeg"</span>,</span><br><span class="line">    <span class="attr">"name"</span>: <span class="string">"闪烁之狐"</span>,</span><br><span class="line">    <span class="attr">"introduction"</span>: <span class="string">"编程界大佬，技术牛，人还特别好，不懂的都可以请教大佬"</span>,</span><br><span class="line">    <span class="attr">"url"</span>: <span class="string">"https://blinkfox.github.io/"</span>,</span><br><span class="line">    <span class="attr">"title"</span>: <span class="string">"前去学习"</span></span><br><span class="line">&#125;, &#123;</span><br><span class="line">    <span class="attr">"avatar"</span>: <span class="string">"http://image.luokangyuan.com/avatar.jpg"</span>,</span><br><span class="line">    <span class="attr">"name"</span>: <span class="string">"ja_rome"</span>,</span><br><span class="line">    <span class="attr">"introduction"</span>: <span class="string">"平凡的脚步也可以走出伟大的行程"</span>,</span><br><span class="line">    <span class="attr">"url"</span>: <span class="string">"ttps://me.csdn.net/jlh912008548"</span>,</span><br><span class="line">    <span class="attr">"title"</span>: <span class="string">"前去学习"</span></span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure><p><a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md" target="_blank" rel="noopener">Hexo文档</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo入门 </tag>
+            
+            <tag> Github博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>测试0</title>
       <link href="/2019/04/15/%E6%B5%8B%E8%AF%950/"/>
       <url>/2019/04/15/%E6%B5%8B%E8%AF%950/</url>
@@ -75,33 +102,6 @@
             <tag> all </tag>
             
             <tag> 起步 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>typora-vue-theme主题介绍</title>
-      <link href="/2018/09/07/demo/"/>
-      <url>/2018/09/07/demo/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> Markdown </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Typora </tag>
-            
-            <tag> Markdown </tag>
             
         </tags>
       
